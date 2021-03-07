@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Book-Store</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  background-color: #343a40;
+  font-size: 1.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 55px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+#uno {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  /* border: 1px solid white; */
+  width: 500px;
+}
+
+@media screen and (max-width: 600px) {
+  nav,
+  #uno {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+
+table,tr,th,td
+{
+
+padding: 15px;
+}
+table{
+margin-bottom: 50px;
+width: 100%;
+}
+tr:hover{
+  background-color: rgb(240, 248, 248);
+}
+
+@media screen and (max-width: 600px) {
+section {
+  
+  align-items: center;
+  flex-direction: row;
+
+}
+}
+
+.flipCardContainer{
+  display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+#avtarImg{
+  width: 100%;
+  height: 300px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+#fcb1{
+  background-color: rgb(255, 247, 216);;
+  color: black;
+  transform: rotateY(180deg);
+}
+#fcb2{
+  background-color: rgb(255, 247, 216);;
+  color: black;
+  transform: rotateY(180deg);
+}
+#fcb3{
+  background: rgb(255, 247, 216);
+  color: black;
+  transform: rotateY(180deg);
+}
+#fcb4{
+  background-color:rgb(255, 247, 216);
+  color: black;
+  transform: rotateY(180deg);
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+#contact{
+background-color:rgb(255, 247, 216) ;
+}
+
+
+footer {
+text-align: center;
+padding: 3px;
+background-color:black;
+opacity: 0.6;
+color: white;
+}
+</style>
+</head>
+<body>
+  <nav>
+    <ul id="uno">
+        <li id="lis"><a href="#demo" >Home</a></li>
+        <li id="lis"><a href="#type">Types</a></li>
+        <li id="lis"><a href="#menu">Menu</a></li>
+        <li id="lis"><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://i.guim.co.uk/img/media/77e3e93d6571da3a5d77f74be57e618d5d930430/0_0_2560_1536/master/2560.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&s=b1b288d92b51ba3c1a48a97ecf154d5e" width="1540" height="450">
+      
+    </div>
+    <div class="carousel-item">
+      <img src="https://pen.org/wp-content/uploads/2020/10/banned-books-week-reading-list-header.jpg" width="1540" height="450">
+    </div>
+    <div class="carousel-item">
+      <img src="https://api.time.com/wp-content/uploads/2019/11/top-10-fiction-2019.jpg" width="1540" height="450">
+       
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a></div>
+</div>
+</div>
+<br>
+<br>
+
+<h3 id="type" align="center">Let's Read a Book As per Our Mood</h3>
+<br><br>
+<div style="overflow-x: auto;">
+<table border="1px solid black">
+  <tr>
+    <th>Books By Category</th>
+    <th>Books By Discount</th>
+    <th>Books By Our Famous Author</th>
+    <th>Books By Language</th>
+  </tr>
+  <tr>
+    <td>Comic Book or Graphic Novel.</td>
+    <td>Upto 50%</td>
+    <td>Alan Moore,Jim Shooter</td>
+    <td>English</td>
+  </tr>
+  <tr>
+    <td>Action and Adventure.</td>
+    <td>Upto 30%</td>
+    <td>Miguel de Cervantes,Robert Louis Stevenson</td>
+    <td>Hindi</td>
+  </tr>
+  <tr>
+    <td>Detective and Mystery</td>
+    <td>Upto 60%</td>
+    <td>Tana French,Parker bilal</td>
+    <td>English</td>
+  </tr>
+</table></div>
+<br>
+<hr>
+<br>
+
+
+<h3 id="menu" align="center">Menu </h3>
+<br><br>
+<section>
+  <div class="flipCardContainer" id="menu" >
+    <div class="flip-card" >
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="https://m.media-amazon.com/images/I/71F-owiGtrL._AC_UY218_.jpg" alt="Adventure Book" id="avtarImg">
+        </div>
+        <div class="flip-card-back"  id="fcb1">
+          <h2>Adventure Book</h2> 
+          <p>&#8377; 292</p>
+<p>In Hindi</p>
+          <p>Meluha Ke Mritunjay (Immortals of Meluha)</p> 
+          <p><b>Author : </b>Amish Tripathi</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="https://i1.wp.com/www.tor.com/wp-content/uploads/2018/01/Moore-SmallKilling.jpg?fit=740%2C+9999&crop=0%2C0%2C100%2C416px&quality=100&ssl=1" alt="Comic Book" id="avtarImg">
+        </div>
+        <div class="flip-card-back" id="fcb2">
+          <h1>Comic book</h1> 
+          <p>&#8377; 252</p>
+          <p>A Small Killing</p> 
+          <p><b>Author : </b>Alan More</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="https://static.prod.abebookscdn.com/cdn/com/images/30-essential-mystery-authors/dorothy-sayers.jpg" alt="Mystery Book" id="avtarImg">
+        </div>
+        <div class="flip-card-back"  id="fcb3">
+          <h1>Mystery Book</h1> 
+          <p>&#8377; 400</p>
+          <p>Whose Body?</p> 
+          <p><b>Author : </b>Dorothy L.sayers</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="https://www.booklane.in/image/cache/catalog/product/pibd/origin-a-novel-250x250.jpg" alt="Action and Adventure" id="avtarImg">
+        </div>
+        <div class="flip-card-back"  id="fcb4">
+          <h1>Action and Adventure</h1> 
+          <p>&#8377; 330</p>
+          <p>Origin</p> 
+          <p><b>Author : </b>Dan Brown</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<br><br><br>
+  <hr><br>
+
+
+    <div id="contact" align="center"><br><br><br>
+      <h1>Book-Store</h1>
+      <p><i>Book Author</i></p><br>
+      <p>ph(+91)000 999 0001</p>
+      <p>www.book-store.com</p>
+      <p>book1@address.com</p><br>
+      <p>123 street address</p>
+      <p>India,state Haryana</p>
+      <br>
+    </div>
+    <br><br>
+
+    <footer>
+      <p>Author: Book-Store<br>
+      <a href="book1@address.com">book1@address.com</a></p>
+    </footer>
+</body>
+</html>
